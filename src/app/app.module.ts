@@ -10,6 +10,7 @@ import { ContactPage } from "../pages/contact/contact";
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from "../pages/tabs/tabs";
 import { YoutubePage } from "../pages/youtube/youtube";
+import { MasinfoPage } from "../pages/masinfo/masinfo";
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { YoutubePage } from "../pages/youtube/youtube";
     ContactPage,
     HomePage,
     TabsPage,
-    YoutubePage
+    YoutubePage,
+    MasinfoPage
   ],
   imports: [
     BrowserModule,
@@ -31,7 +33,8 @@ import { YoutubePage } from "../pages/youtube/youtube";
     ContactPage,
     HomePage,
     TabsPage,
-    YoutubePage
+    YoutubePage,
+    MasinfoPage
   ],
   providers: [
     StatusBar,
