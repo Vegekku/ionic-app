@@ -4,6 +4,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AboutPage } from "../about/about";
 import { ContactPage } from "../contact/contact";
 import { HomePage } from "../home/home";
+import { YoutubePage } from "../youtube/youtube";
 
 /**
  * Generated class for the TabsPage page.
@@ -22,6 +23,7 @@ export class TabsPage {
   tab1Root = HomePage;
   tab2Root = AboutPage;
   tab3Root = ContactPage;
+  tab4Root = YoutubePage;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
