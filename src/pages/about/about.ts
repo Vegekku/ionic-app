@@ -15,6 +15,39 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class AboutPage {
 
+  list: Array<any> = [
+    {
+      title: "Shopping",
+      icon: "cart",
+      color: "#111"
+    },
+    {
+      title: "Hospital",
+      icon: "medical",
+      color: "#222"
+    },
+    {
+      title: "Cafe",
+      icon: "cafe",
+      color: "#333"
+    },
+    {
+      title: "Dog Park",
+      icon: "paw",
+      color: "#444"
+    },
+    {
+      title: "Pub",
+      icon: "beer",
+      color: "#555"
+    },
+    {
+      title: "Space",
+      icon: "planet",
+      color: "#666"
+    }
+  ];
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
