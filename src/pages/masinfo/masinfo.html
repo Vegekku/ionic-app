@@ -7,12 +7,13 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>M&aacute;s info</ion-title>
+    <ion-title>{{item.title}}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ex justo, sodales eu dignissim sit amet, fringilla quis quam. Duis euismod ligula luctus enim porta, eu mattis eros convallis. In tincidunt sit amet nisi quis condimentum. Praesent posuere magna in leo eleifend, in iaculis ligula fringilla. Nullam ultricies tellus eu ex pulvinar auctor. Nullam efficitur vel metus vitae varius. Phasellus felis purus, aliquam quis sapien a, lacinia congue lacus. Fusce viverra elit faucibus commodo condimentum. Suspendisse tempor et eros eget aliquam. Mauris in tempus nibh. Vivamus pulvinar eros in lectus vulputate, sit amet egestas neque lacinia. Nulla in neque vel tortor venenatis venenatis non et nisl. Sed aliquam tempor lacinia. Donec non mi sapien.</p>
+  <ion-icon [name]="'logo-' + item.icon" [ngStyle]="{'color': item.color}"></ion-icon>
+  {{item.description}}
 </ion-content>
