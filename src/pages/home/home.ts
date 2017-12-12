@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {AlertController, NavController} from 'ionic-angular';
+import {TestProvider} from "../../providers/test/test";
 
 @Component({
   selector: 'page-home',
@@ -7,8 +8,21 @@ import {AlertController, NavController} from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
+    users;
+  constructor(public navCtrl: NavController, public alertCtrl: AlertController, public testProvider: TestProvider) {
 
+  }
+
+  ionViewDidLoad(){
+      this.testProvider.getData()
+          .subscribe(
+              (data) => {
+                  this.users = data;
+              },
+              (error) => {
+                  console.log(error);
+              }
+          );
   }
 
   doAlert() {

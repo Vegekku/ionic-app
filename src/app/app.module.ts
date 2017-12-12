@@ -11,6 +11,8 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from "../pages/tabs/tabs";
 import { YoutubePage } from "../pages/youtube/youtube";
 import { MasinfoPage } from "../pages/masinfo/masinfo";
+import { TestProvider } from '../providers/test/test';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { MasinfoPage } from "../pages/masinfo/masinfo";
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -39,7 +42,8 @@ import { MasinfoPage } from "../pages/masinfo/masinfo";
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    TestProvider
   ]
 })
 export class AppModule {}
