@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-
-import { MasinfoPage } from "../masinfo/masinfo";
+import {AlertController, NavController} from 'ionic-angular';
 
 @Component({
   selector: 'page-home',
@@ -9,12 +7,17 @@ import { MasinfoPage } from "../masinfo/masinfo";
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
 
   }
 
-  otraPagina() {
-      this.navCtrl.push(MasinfoPage);
+  doAlert() {
+      let alert = this.alertCtrl.create({
+          title: "New Friend!",
+          message: "Your friend, Obi wan Kenobi, just approved your friend request!",
+          buttons: ['Ok']
+      });
+      alert.present();
   }
 
 }
