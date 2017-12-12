@@ -20,4 +20,32 @@ export class HomePage {
       alert.present();
   }
 
+  doAlert2() {
+      let alert = this.alertCtrl.create({
+          title: "Login",
+          message: "Enter a name for this new album you're so keen on adding",
+          inputs: [
+              {
+                name: "Nombre",
+                  placeholder: "Nombre"
+              }
+          ],
+          buttons: [
+              {
+                  text: 'Cancel',
+                  handler: data => {
+                      console.log('Cancel clicked');
+                  }
+              },
+              {
+                  text: 'Save',
+                  handler: data => {
+                      console.log('Saved clicked');
+                  }
+              }
+          ]
+      });
+      alert.present();
+  }
+
 }
